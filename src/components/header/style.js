@@ -3,6 +3,9 @@ import { theme } from "../../themes";
 console.log(theme);
 export const StyledHeader = styled.header`
   width: 100%;
+<<<<<<< HEAD
+  height: 80px;
+=======
   height: 70px;
   background: ${theme.green.secondary};
   display: flex;
@@ -43,4 +46,5 @@ export const StyledNavegation = styled.section`
   nav {
     cursor: pointer;
   }
+>>>>>>> 92bc06a49d925ba98e1c8f30b21b63989a28e6d4
 `;

@@ -15,7 +15,6 @@ export const theme = {
     third: "#F4F4F4",
     fourth: "#DFDFDF",
   },
-
   secondary: {
     lightPurple: "#7B7884",
     yellow: "#F99B09",
