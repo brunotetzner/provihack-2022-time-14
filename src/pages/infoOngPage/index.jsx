@@ -1,6 +1,10 @@
-import Header from "../../components/header";
-const InfoOngPage = () => {
-  return <Header type="ong" />;
-};
+const InfoOngPage = ()=>{
+    return(
+    <div>
+    InfoOngPage
 
-export default InfoOngPage;
+    </div>
+)
+    }
+
+export default InfoOngPage
