@@ -1,10 +1,10 @@
-const InfoOngPage = ()=>{
-    return(
-    <div>
-    InfoOngPage
+// const InfoOngPage = ()=>{
+//     return(
+//     <div>
+//     InfoOngPage
 
-    </div>
-)
-    }
+//     </div>
+// )
+//     }
 
-export default InfoOngPage
+// export default InfoOngPage

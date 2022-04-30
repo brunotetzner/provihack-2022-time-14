@@ -1,10 +1,10 @@
-const InfoSchoolPage = ()=>{
-    return(
-    <div>
-    InfoSchoolPage
+// const InfoSchoolPage = ()=>{
+//     return(
+//     <div>
+//     InfoSchoolPage
 
-    </div>
-)
-    }
+//     </div>
+// )
+//     }
 
-export default InfoSchoolPage
+// export default InfoSchoolPage
