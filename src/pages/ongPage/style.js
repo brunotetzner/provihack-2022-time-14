@@ -6,7 +6,7 @@ export const CardsContainer = styled.div`
     grid-template-rows:auto;
     row-gap: 25px;
     column-gap: 25px;
-  
+    justify-content: center;
 `
 
 export const IconContainer = styled.span`

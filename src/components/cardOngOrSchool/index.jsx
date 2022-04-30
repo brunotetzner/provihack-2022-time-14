@@ -24,7 +24,7 @@ const CardOngOrSchool = (props) => {
             >
                 <FrontSide style={{ backgroundColor: `${theme.white.third}`, padding: '20px 24px', height: '100%', width: '100%', borderRadius: '30px', boxShadow: '2px 4px 4px rgba(0, 0, 0, 0.25)' }} animationDuration={1000}>
                     <Container>
-                        {props.user.type === 'escola' ? <IconContainer><IoSchoolSharp /></IconContainer> : <IconContainer><MdPeople /></IconContainer>}
+                        {props.type === 'escola' ? <IconContainer><IoSchoolSharp /></IconContainer> : <IconContainer><MdPeople /></IconContainer>}
                         <div>
                             <Title>{props.user.name}</Title>
                             <span>{props.user.description}</span>
@@ -39,7 +39,7 @@ const CardOngOrSchool = (props) => {
                             </CausesLisContainer>
                         </div>
 
-                        <Button color={props.user.type} onClick={() => setFlip(true)}>
+                        <Button color={props.type} onClick={() => setFlip(true)}>
                             Ver contato
                         </Button>
                     </Container>
@@ -66,7 +66,7 @@ const CardOngOrSchool = (props) => {
                             <span><MdMailOutline /> </span>
                             <p>{props.user.email}</p>
                         </Mail>
-                        <Button color={props.user.type} onClick={() => setFlip(false)}>
+                        <Button color={props.type} onClick={() => setFlip(false)}>
                             Voltar
                         </Button>
                     </BackInfo>
