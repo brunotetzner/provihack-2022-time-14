@@ -1,10 +1,11 @@
-const SchoolPage = ()=>{
-    return(
+import Header from "../../components/header";
+
+const SchoolPage = () => {
+  return (
     <div>
-    SchoolPage
-
+      <Header type="school" />
     </div>
-)
-    }
+  );
+};
 
-export default SchoolPage
+export default SchoolPage;

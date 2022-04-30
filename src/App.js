@@ -1,7 +1,12 @@
 import Router from "./routes";
-
+import { GlobalStyle } from "./themes/globalStyle";
 function App() {
-  return <Router />;
+  return (
+    <div>
+      <GlobalStyle />
+      <Router />
+    </div>
+  );
 }
 
 export default App;
