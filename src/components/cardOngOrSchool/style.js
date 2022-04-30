@@ -115,11 +115,6 @@ export const Button = styled.button`
     font-size: 1.5rem;
     font-weight: 700;
     width: 100%;
-    :hover{
-        /* opacity: 90%; */
-        box-shadow:1px 1px 5px black;
-
-    }
 
 `
 
