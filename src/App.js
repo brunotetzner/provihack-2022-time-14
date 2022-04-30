@@ -1,5 +1,7 @@
+import Router from "./routes";
+
 function App() {
-  return <div>PROVIHACK</div>;
+  return <Router />;
 }
 
 export default App;
