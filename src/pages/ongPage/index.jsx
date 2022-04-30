@@ -101,12 +101,13 @@ const OngPage = () => {
     return (
         <>
             <Header type="ong" />
+
             Escolas
             <CardsContainer>
 
                 {
                     user.map((item) => {
-                        return <CardOngOrSchool user={item} key={item} />
+                        return <CardOngOrSchool user={item} key={item} type="ong" />
                     })
                 }
             </CardsContainer>
