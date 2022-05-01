@@ -1,4 +1,4 @@
-import { Button, Content, SectionAboutUs, Text } from "./style"
+import { Content, SectionAboutUs, Text } from "./style"
 
 
 const AboutUsSection = () => {
@@ -11,8 +11,6 @@ const AboutUsSection = () => {
                         Nós ajudamos aumentar o engajamento das pessoas na resolução de problemas ambientais em comunidades periféricas, a partir da conexão de ongs, escolas e voluntários por meio de capacitações, criação e execução da solução.
                     </h6>
                 </Text>
-
-                <Button>Quero fazer parte</Button>
             </Content>
         </SectionAboutUs>
     )

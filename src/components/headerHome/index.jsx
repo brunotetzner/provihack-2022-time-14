@@ -9,7 +9,6 @@ const HeaderHome = () => {
       <img src={LogoBird} alt="Logomarca" />
       <ButtonsContainer>
         <LoginButton onClick={() => navigate("/login")}>Login</LoginButton>
-        <JoinButton>Faça parte</JoinButton>
       </ButtonsContainer>
     </Header>
   );
