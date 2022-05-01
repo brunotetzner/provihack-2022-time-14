@@ -119,14 +119,10 @@ export const Button = styled.button`
     color:  ${props => props.color==='school' ? theme.white.secondary : theme.black.secondary};
     padding: 20px;
     border-radius: 10px;
-    /* margin-top: 32px; */
     align-self: left;
     font-size: 1.5rem;
     font-weight: 700;
     width: 100%;
-    /* position: absolute;
-    bottom:20px; */
-    /* left: 0px; */
     :hover{
 
         box-shadow:1px 1px 1px black;
