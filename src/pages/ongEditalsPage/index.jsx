@@ -1,50 +1,85 @@
-import { StyledArticle } from "./style";
+import { StyledArticle, Title } from "./style";
 import Header from "../../components/header";
 import CardInfoOrEdital from "../../components/cardInfoOrEdital";
+import Filter from "../../components/filterHeader";
+import { useState, useEffect } from "react";
+
+import { editalsMock } from "./editalsMock";
+
 const OngEditalsPage = () => {
-  const mock = [
-    {
-      image:
-        "http://images.squarespace-cdn.com/content/v1/5ce33debeef69b0001a96577/1561418326998-DGJ3TOKNO07GOMB2TCTG/greenworld_logo.png",
-      title: "33º edital PPP-ECOS recebe inscrições",
-      inscription: "20/04/2022 até 02/05/2022",
-      financy: "Fundação Bradesco",
-      tag: "aberto",
-      link: "https://youtube.com",
-    },
-    {
-      image:
-        "http://images.squarespace-cdn.com/content/v1/5ce33debeef69b0001a96577/1561418326998-DGJ3TOKNO07GOMB2TCTG/greenworld_logo.png",
-      title: "33º edital PPP-ECOS recebe inscrições",
-      inscription: "20/04/2022 até 02/05/2022",
-      financy: "Fundação Bradesco",
-      tag: "aberto",
-      link: "https://youtube.com",
-    },
-    {
-      image:
-        "https://lh3.googleusercontent.com/p/AF1QipOtfWfF0TCKm_hRd-UBozFlEYkrYD_x_LK4hR8f=w1080-h608-p-no-v0",
-      title: "33º edital PPP-ECOS recebe inscrições",
-      inscription: "20/04/2022 até 02/05/2022",
-      financy: "Fundação Bradesco",
-      tag: "aberto",
-      link: "https://youtube.com",
-    },
-  ];
+  const [check1, setCheck1] = useState(false);
+  const [check2, setCheck2] = useState(false);
+  const [nameSearch, setNameSearch] = useState("");
+  const [ongsToRender, setOngsToRender] = useState([]);
+
+  const searchForName = () => {
+    setOngsToRender(
+      editalsMock.filter((ong) =>
+        ong.title.toLowerCase().includes(nameSearch.toLowerCase())
+      )
+    );
+  };
+
+  const onChangeCheck1 = (event) => {
+    setCheck1(event.target.checked);
+  };
+  const onChangeCheck2 = (event) => {
+    setCheck2(event.target.checked);
+  };
+
+  const onChangeNameSearch = (event) => {
+    setNameSearch(event.target.value);
+  };
+
+  const filters = [check1, check2];
+  const onChangeFilters = [onChangeCheck1, onChangeCheck2];
+  const filtersCheckbox = ["aberto", "fechado"];
+
+  const listOngsFilter =
+    editalsMock &&
+    editalsMock
+      .filter((ong) => {
+        return !check1 || ong.tag.includes("aberto");
+      })
+      .filter((ong) => {
+        return !check2 || ong.tag.includes("fechado");
+      });
+
+  useEffect(() => {
+    !nameSearch && setOngsToRender(editalsMock);
+    (check1 || check2) && setOngsToRender(listOngsFilter);
+  }, [nameSearch, check1, check2]);
   return (
     <>
       <Header type="ong" />
       <StyledArticle>
-        {mock.map((item) => (
-          <CardInfoOrEdital
-            image={item.image}
-            title={item.title}
-            inscription={item.inscription}
-            financy={item.financy}
-            tag={item.tag}
-            link={item.link}
-          />
-        ))}
+        <Filter
+          filtersCheckbox={filtersCheckbox}
+          filters={filters}
+          onChangeFilters={onChangeFilters}
+          onChangeNameSearch={onChangeNameSearch}
+          nameSearch={nameSearch}
+          page={"Editais"}
+          onCLickSearch={searchForName}
+        />
+        <div id="quantity">
+          <Title>ONG's</Title>
+          <h5>{ongsToRender.length} resultados</h5>
+        </div>
+        {ongsToRender && ongsToRender.length > 0 ? (
+          ongsToRender.map((item) => (
+            <CardInfoOrEdital
+              image={item.image}
+              title={item.title}
+              inscription={item.inscription}
+              financy={item.financy}
+              tag={item.tag}
+              link={item.link}
+            />
+          ))
+        ) : (
+          <Title>Infelizmente não encontramos nenhum resultado :( </Title>
+        )}
       </StyledArticle>
     </>
   );

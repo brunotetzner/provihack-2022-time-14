@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../themes";
 console.log(theme);
 export const StyledHeader = styled.header`
-  width: 100%;
+  max-width: 100vw;
   height: 95px;
   background: ${theme.green.secondary};
   display: flex;

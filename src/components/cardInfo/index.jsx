@@ -1,12 +1,5 @@
 import { CardContainer } from "./style";
-const CardInfoOrEdital = ({
-  image,
-  title,
-  inscription,
-  financy,
-  tag,
-  link,
-}) => {
+const CardInfo = ({ image, title, description, tag, link }) => {
   return (
     <CardContainer>
       <img src={image} target="imagem ilustrativa" />
@@ -16,14 +9,9 @@ const CardInfoOrEdital = ({
         </p>
         <h1>{title}</h1>
         <div>
-          <h5>Inscrições: </h5>
+          <h5>Descrição: </h5>
           &nbsp;
-          <p> {inscription}</p>
-        </div>
-        <div>
-          <h5>Financiado por:</h5>
-          &nbsp;
-          <p>{financy}</p>
+          <p> {description}</p>
         </div>
         <a href={link}>ver mais</a>
       </div>
@@ -31,4 +19,4 @@ const CardInfoOrEdital = ({
   );
 };
 
-export default CardInfoOrEdital;
+export default CardInfo;
