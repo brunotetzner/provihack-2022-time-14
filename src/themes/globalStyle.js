@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./index"
 
 export const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -44,4 +45,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*::-webkit-scrollbar {
+    width: 4px;
+  }
+  *::-webkit-scrollbar-thumb {
+      background-color: ${theme.black.secondary};
+      opacity:40%;
+      border-radius: 2px;
+  }
+  *::-webkit-scrollbar-track {
+      background: transparent;
+  }
 `;
