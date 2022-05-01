@@ -1,8 +1,9 @@
+import PlanBSection from "../../components/planBSection"
+
 const LandingPage = ()=>{
     return(
     <div>
-    LandingPage
-
+        <PlanBSection />
     </div>
 )
     }
