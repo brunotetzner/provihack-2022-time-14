@@ -1,6 +1,6 @@
 import CardOngOrSchool from "../../components/cardOngOrSchool"
 import { useSearchParams } from "react-router-dom"
-import { CardsContainer } from "./style";
+import { CardsContainer, OngPageContainer } from "./style";
 import Header from "../../components/header";
 
 const OngPage = () => {
@@ -99,11 +99,13 @@ const OngPage = () => {
     ]
 
     return (
-        <>
+        <OngPageContainer>
             <Header type="ong" />
 
-            Escolas
-            <CardsContainer>
+            <div>
+            <h4>ONG's</h4>
+            </div>
+            <CardsContainer type="ong">
 
                 {
                     user.map((item) => {
@@ -111,7 +113,7 @@ const OngPage = () => {
                     })
                 }
             </CardsContainer>
-        </>
+        </OngPageContainer>
     )
 }
 

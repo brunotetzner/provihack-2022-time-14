@@ -22,7 +22,7 @@ const CardOngOrSchool = (props) => {
                 ref={ref}
                 style={{ width: '376px', height: '416px' }}
             >
-                <FrontSide style={{ backgroundColor: `${theme.white.third}`, padding: '20px 24px', height: '100%', width: '100%', borderRadius: '30px', boxShadow: '2px 4px 4px rgba(0, 0, 0, 0.25)' }} animationDuration={1000}>
+                <FrontSide style={{ backgroundColor: `${theme.white.third}`, padding: '20px 24px', height: '100%', width: '100%', borderRadius: '30px', boxShadow: '2px 4px 4px rgba(0, 0, 0, 0.15)' }} animationDuration={1000}>
                     <Container>
                         {props.type === 'escola' ? <IconContainer><IoSchoolSharp /></IconContainer> : <IconContainer><MdPeople /></IconContainer>}
                         <div>
@@ -45,7 +45,7 @@ const CardOngOrSchool = (props) => {
                     </Container>
 
                 </FrontSide>
-                <BackSide style={{ backgroundColor: `${theme.white.third}`, borderRadius: '30px', boxShadow: '2px 4px 4px rgba(0, 0, 0, 0.25)', padding:'0px'}} animationDuration={1000}>
+                <BackSide style={{ backgroundColor: `${theme.white.third}`, borderRadius: '30px', boxShadow: '2px 4px 4px rgba(0, 0, 0, 0.15)', padding:'0px'}} animationDuration={1000}>
                     <BackHeader>
                         <p>{props.user.name}</p>
                     </BackHeader>
