@@ -4,8 +4,7 @@ import { theme } from "../../themes"
 export const CardContainer = styled.div`
     color: ${theme.secondary.darkPurple};
     max-width: 376px; 
-    max-height: 416px;
-  
+    min-height: 416px;
 `
 export const CausesContainer = styled.span`
     background-color: ${theme.secondary.darkPurple};
@@ -44,7 +43,7 @@ export const BackHeader = styled.div`
     background-color: ${theme.black.secondary};
     color:${theme.white.primary};
     width: 100%;
-    border-radius: 30px 30px 0px 0px;
+    border-radius: 27px 27px 0px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
