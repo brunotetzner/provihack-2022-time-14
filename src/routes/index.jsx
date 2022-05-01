@@ -5,8 +5,6 @@ import OngPage from "../pages/ongPage/index";
 import SchoolPage from "../pages/schoolPage/index";
 import Signin from "../pages/signIn/index";
 import LandingPage from "../pages/landingPage/index";
-import OportunitySchoolPage from "../pages/OportunitySchoolPage";
-import OportunityOngPage from "../pages/OportunityOngPage";
 import OngEditalsPage from "../pages/ongEditalsPage";
 import SchoolEditalsPage from "../pages/schoolEditalsPage";
 
@@ -20,8 +18,6 @@ const Router = () => {
         <Route path={"/ong"} element={<OngPage />} />
         <Route path={"/school"} element={<SchoolPage />} />
         <Route path={"/login"} element={<Signin />} />
-        <Route path={"/school/oportunity"} element={<OportunitySchoolPage />} />
-        <Route path={"/ong/oportunity"} element={<OportunityOngPage />} />
         <Route path={"/ong/editals"} element={<OngEditalsPage />} />
         <Route path={"/school/editals"} element={<SchoolEditalsPage />} />
 
