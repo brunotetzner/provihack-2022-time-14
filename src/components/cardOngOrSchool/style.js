@@ -2,14 +2,9 @@ import styled from "styled-components"
 import { theme } from "../../themes"
 
 export const CardContainer = styled.div`
-
+    color: ${theme.secondary.darkPurple};
     max-width: 376px; 
     max-height: 416px;
-
-    /* min-height: ; */
-    /* h3{
-        font-size: 1.3rem;
-    } */
   
 `
 export const CausesContainer = styled.span`
@@ -23,6 +18,7 @@ export const CausesContainer = styled.span`
 export const IconContainer = styled.span`
     font-size: 1.5rem;
     margin-bottom: 24px;
+    color:#000000;
 `
 export const Container = styled.div`
     display: flex;
@@ -48,7 +44,6 @@ export const BackHeader = styled.div`
     background-color: ${theme.black.secondary};
     color:${theme.white.primary};
     width: 100%;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px 30px 0px 0px;
     display: flex;
     align-items: center;
@@ -116,8 +111,9 @@ export const Button = styled.button`
     font-weight: 700;
     width: 100%;
     :hover{
-        /* opacity: 90%; */
-        box-shadow:1px 1px 5px black;
+
+        box-shadow:1px 1px 1px black;
+        background-color: #B97100 ;
 
     }
 
