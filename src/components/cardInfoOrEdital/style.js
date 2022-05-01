@@ -54,6 +54,7 @@ export const CardContainer = styled.section`
   }
 
   a {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
