@@ -5,6 +5,7 @@ import Header from "../../components/header";
 import { CardsContainer, CardsHeader, Title, LoaderContainer, TextNotFound } from "./style";
 import { getRequest, getRequestSearchFilter } from "../../services/requests";
 import { Loader } from "../../components/Loader";
+import Footer from "../../components/footer";
 
 const SchoolPage = () => {
 
@@ -80,33 +81,33 @@ const SchoolPage = () => {
         onCLickSearch={onCLickSearch}
       />
       {
-        listSchoolsFilter&&listSchoolsFilter.length > 0 ?
-          <>
-            <CardsHeader>
-              <Title>Escolas</Title>
-              <span>{listSchoolsFilter.length} resultados</span>
+        loading ?
 
-            </CardsHeader>
-            {
-              loading ?
-
-                <LoaderContainer>
-                  <Loader />
-                </LoaderContainer>
-                :
-                <CardsContainer type="school">
-
-                  {
-                    listSchoolsFilter.map((item, index) => {
-                      return <CardOngOrSchool org={item} key={index} type="school" />
-                    })
-                  }
-                </CardsContainer>
-            }
-          </>
+          <LoaderContainer>
+            <Loader />
+          </LoaderContainer>
           :
-          <TextNotFound>Infelizmente não encontramos nenhuma Escola cadastrada com esse perfil :( </TextNotFound>
+          listSchoolsFilter && listSchoolsFilter.length > 0 ?
+            <>
+              <CardsHeader>
+                <Title>Escolas</Title>
+                <span>{listSchoolsFilter.length} resultados</span>
+
+              </CardsHeader>
+
+              <CardsContainer type="school">
+
+                {
+                  listSchoolsFilter.map((item, index) => {
+                    return <CardOngOrSchool org={item} key={index} type="school" />
+                  })
+                }
+              </CardsContainer>
+            </>
+            :
+            <TextNotFound>Infelizmente não encontramos nenhuma Escola cadastrada com esse perfil :( </TextNotFound>
       }
+      <Footer />
     </>
   );
 };

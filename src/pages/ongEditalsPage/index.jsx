@@ -5,6 +5,7 @@ import Filter from "../../components/filterHeader";
 import { useState, useEffect } from "react";
 
 import { editalsMock } from "./editalsMock";
+import Footer from "../../components/footer";
 
 const OngEditalsPage = () => {
   const [check1, setCheck1] = useState(false);
@@ -81,6 +82,7 @@ const OngEditalsPage = () => {
           <Title>Infelizmente não encontramos nenhum resultado :( </Title>
         )}
       </StyledArticle>
+      <Footer />
     </>
   );
 };
