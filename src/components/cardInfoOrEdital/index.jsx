@@ -9,7 +9,7 @@ const CardInfoOrEdital = ({
 }) => {
   return (
     <CardContainer>
-      <img src={image} target="imagem ilustrativa" />
+      <img src={image} alt="imagem ilustrativa" />
       <div id="info">
         <p>
           <span>{tag}</span>

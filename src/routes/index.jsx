@@ -24,7 +24,6 @@ const Router = () => {
         <Route path={"/tips"} element={<TipsPage />} />
 
         <Route path={"/*"} element={<LandingPage />} />
-        {/* Alterar a pagina de erro */}
       </Routes>
     </BrowserRouter>
   );

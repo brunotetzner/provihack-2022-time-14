@@ -7,7 +7,7 @@ const Header = ({ type }) => {
   return (
     <StyledHeader>
       <div>
-        <img src={Logo} target="logo" />
+        <img src={Logo} alt="Perfil do usuário" />
       </div>
 
       <StyledNavegation>

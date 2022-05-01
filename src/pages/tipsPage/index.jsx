@@ -79,7 +79,6 @@ const TipsPage = () => {
           </TipItem>
         </TipsGrid>
       </TipsSection>
-      {/* <Footer /> */}
     </>
   );
 };

@@ -56,7 +56,7 @@ const OngPage = () => {
   const filters = [check1, check2, check3, check4, check5]
   const onChangeFilters = [onChangeCheck1, onChangeCheck2, onChangeCheck3, onChangeCheck4, onChangeCheck5]
   const filtersCheckbox = ['Reciclagem', 'Compostagem', 'Alimentos Orgânicos', 'Economia de água', 'Economia de energia']
-  console.log(filters, filtersCheckbox)
+  
   const listOngsFilter =
     ongs.ongsList && ongs.ongsList
       .filter((ong) => {

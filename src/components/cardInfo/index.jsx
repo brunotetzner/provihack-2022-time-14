@@ -2,7 +2,7 @@ import { CardContainer } from "./style";
 const CardInfo = ({ image, title, description, tag, link }) => {
   return (
     <CardContainer>
-      <img src={image} target="imagem ilustrativa" />
+      <img src={image} alt="imagem ilustrativa" />
       <div id="info">
         <p>
           <span>{tag}</span>

@@ -4,6 +4,7 @@ import { theme } from "../../themes";
 export const FilterContainer = styled.div`
   padding: 96px 50px 80px 50px;
 `;
+
 export const Input = styled.input`
   width: 995px;
   font-size: 21px;
@@ -13,6 +14,7 @@ export const Input = styled.input`
   border-radius: 10px;
   outline: none;
 `;
+
 export const Select = styled.select`
   font-size: 21px;
   padding: 22px;
@@ -21,6 +23,7 @@ export const Select = styled.select`
   border-radius: 10px;
   outline: none;
 `;
+
 export const Title = styled.h4`
   font-weight: 700;
   font-size: 38px;

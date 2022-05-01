@@ -1,9 +1,6 @@
-import { useNavigate } from 'react-router-dom'
 import { ListInfo, TitleInfo, TitleSection, NewsSectionContainer, InfoContent, ContainerFirstCard, ContainerThirdCard, ContainerSecondCard } from './style'
 
-
 const News = () => {
-    const navigate = useNavigate()
     return (
         <NewsSectionContainer>
             <TitleSection>Ajude a salvar o nosso planeta!</TitleSection>
