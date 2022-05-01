@@ -7,10 +7,19 @@ export const FooterContainer = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
-    
+`
+
+export const FooterContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     p {
         color: ${theme.white.secondary};
         font-size: 24px;
         font-weight: 100;
+    }
+    img {
+        align-self: flex-end;
     }
 `
