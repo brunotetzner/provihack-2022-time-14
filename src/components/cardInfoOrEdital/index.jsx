@@ -11,7 +11,9 @@ const CardInfoOrEdital = ({
     <CardContainer>
       <img src={image} target="imagem ilustrativa" />
       <div id="info">
-        <label>{tag}</label>
+        <p>
+          <span>{tag}</span>
+        </p>
         <h1>{title}</h1>
         <div>
           <h5>Inscrições: </h5>
