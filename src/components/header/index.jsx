@@ -11,7 +11,7 @@ const Header = ({ type }) => {
       </div>
 
       <StyledNavegation>
-        <nav onClick={() => navigate(`/${type}/oportunity`)}>Oportunidades</nav>
+        <nav onClick={() => navigate(`/${type}`)}>Oportunidades</nav>
         <nav onClick={() => navigate(`/${type}/info`)}>Material de apoio</nav>
         <nav onClick={() => navigate(`/${type}/editals`)}>Editais</nav>
       </StyledNavegation>
