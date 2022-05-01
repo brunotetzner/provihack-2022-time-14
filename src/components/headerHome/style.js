@@ -20,26 +20,25 @@ export const ButtonsContainer = styled.div`
     padding-right: 120px;
 `
 
+// export const LoginButton = styled.button`
+//     width: 92px;
+//     height: 56px;
+//     background-color: transparent;
+//     color: ${theme.black.third};
+//     font-weight: 400;
+//     font-size: 21px;
+//     line-height: 120%;
+//     border: 1px solid ${theme.black.primary};
+//     box-sizing: border-box;
+//     border-radius: 10px;
+//     cursor: pointer;
+
+//     :hover {
+//         border: 1px solid ${theme.black.third};
+//     }
+// `
 export const LoginButton = styled.button`
-    width: 92px;
-    height: 56px;
-    background-color: transparent;
-    color: ${theme.black.third};
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 120%;
-    border: 1px solid ${theme.black.primary};
-    box-sizing: border-box;
-    border-radius: 10px;
-    cursor: pointer;
-
-    :hover {
-        border: 1px solid ${theme.black.third};
-    }
-`
-
-export const JoinButton = styled.button`
-    width: 176px;
+    width: 120px;
     height: 56px;
     font-weight: 700;
     font-size: 21px;

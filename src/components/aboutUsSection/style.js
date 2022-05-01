@@ -47,22 +47,3 @@ export const Text = styled.div`
         line-height: 150%;
     }
 `
-
-export const Button = styled.button`
-    cursor: pointer;
-    border:none;
-    outline: none;
-    background-color: ${theme.secondary.yellow};
-    color:  ${theme.black.secondary};
-    padding: 16px;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 120%;
-    width: 246px;
-    height: 56px;
-
-    :hover{
-        background-color:${'#B97100'};
-    }
-`
