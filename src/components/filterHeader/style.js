@@ -13,6 +13,14 @@ export const Input = styled.input`
     border-radius: 10px;
     outline: none;
 `
+export const Select = styled.select`
+    font-size: 21px;
+    padding: 22px;
+    border: 1px solid #4D4D4D;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline: none;
+`
 export const Title = styled.h4`
     font-weight: 700;
     font-size: 38px;
@@ -41,7 +49,7 @@ export const SearchContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    gap:30px
+    gap:30px;
 `
 
 export const CheckBoxList = styled.div`
