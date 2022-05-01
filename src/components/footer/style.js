@@ -3,7 +3,7 @@ import { theme } from "../../themes";
 
 export const FooterContainer = styled.footer`
     height: 203px;
-    background-color: ${theme.secondary.darkPurple};
+    background-color: ${theme.black.secondary};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,12 +14,11 @@ export const FooterContent = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     p {
         color: ${theme.white.secondary};
-        font-size: 24px;
-        font-weight: 100;
-    }
-    img {
-        align-self: flex-end;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
     }
 `
