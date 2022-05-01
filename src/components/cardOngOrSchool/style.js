@@ -4,7 +4,7 @@ import { theme } from "../../themes"
 export const CardContainer = styled.div`
     color: ${theme.secondary.darkPurple};
     max-width: 376px; 
-    min-height: 416px;
+    min-height: 416px; 
 `
 export const CausesContainer = styled.span`
     background-color: ${theme.secondary.darkPurple};
@@ -15,6 +15,8 @@ export const CausesContainer = styled.span`
 
 `
 export const IconContainer = styled.span`
+display: flex;
+justify-content: space-between;
     font-size: 1.5rem;
     margin-bottom: 24px;
     color:#000000;
@@ -22,7 +24,8 @@ export const IconContainer = styled.span`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    height: 90%;
+    justify-content: space-between;
+    min-height: 416px;
     p{
         font-weight: bold;
         font-size: 1rem;
@@ -30,7 +33,12 @@ export const Container = styled.div`
     >div{
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 45px;
+        >div{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+        }
     }
 
 `
@@ -52,12 +60,18 @@ export const BackInfo = styled.div`
     margin-top: 8px;
     margin-bottom: 19px;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85%;
     >p{
         font-weight: 400;
         line-height: 150%;
     }
     >div{
-        display: flex;
+        div{
+            display: flex;
+        }
         p{
             font-weight: 400;
             line-height: 150%;
@@ -91,6 +105,7 @@ export const Phone = styled.div`
 `
 export const CausesLisContainer = styled.div`
     display: flex;
+    flex-wrap:wrap;
     align-items: center;
     justify-content: left;
     gap:8px;
@@ -100,19 +115,22 @@ export const Button = styled.button`
     cursor: pointer;
     border:none;
     outline: none;
-    background-color: ${props => props.color==='escola' ? theme.green.secondary : theme.secondary.yellow};
-    color:  ${props => props.color==='escola' ? theme.white.secondary : theme.black.secondary};
+    background-color: ${props => props.color==='school' ? theme.green.secondary : theme.secondary.yellow};
+    color:  ${props => props.color==='school' ? theme.white.secondary : theme.black.secondary};
     padding: 20px;
     border-radius: 10px;
-    margin-top: 32px;
+    /* margin-top: 32px; */
     align-self: left;
     font-size: 1.5rem;
     font-weight: 700;
     width: 100%;
+    /* position: absolute;
+    bottom:20px; */
+    /* left: 0px; */
     :hover{
 
         box-shadow:1px 1px 1px black;
-        background-color: #B97100 ;
+        background-color:${props => props.color==='school' ? theme.green.primary : '#B97100'};
 
     }
 
