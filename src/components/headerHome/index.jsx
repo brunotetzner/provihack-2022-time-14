@@ -1,14 +1,14 @@
 import LogoBird from "../../assets/images/bird.svg"
-import { Header, JoinButton, LoginButton } from "./style"
+import { ButtonsContainer, Header, JoinButton, LoginButton } from "./style"
 
 const HeaderHome = () => {
     return (
         <Header>
             <img src={LogoBird} alt="Logomarca" />
-            <div>
+            <ButtonsContainer>
                 <LoginButton>Login</LoginButton>
                 <JoinButton>Faça parte</JoinButton>
-            </div>
+            </ButtonsContainer>
         </Header>
     )
 }

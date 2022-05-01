@@ -2,19 +2,22 @@ import styled from "styled-components";
 import { theme } from "../../themes";
 
 export const Header = styled.header`
-    max-width: 100vw;
+    width: 100%;
     height: 97.8px;
     border: thin black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 129.5px;
-    padding-right: 120px;
 
     img {
+        padding-left: 129.5px;
         width: 61.57px;
         height: 77.8px;
     }
+`
+
+export const ButtonsContainer = styled.div`
+    padding-right: 120px;
 `
 
 export const LoginButton = styled.button`

@@ -1,11 +1,9 @@
-import HeaderHome from "../../components/headerHome"
+import PlanBSection from "../../components/planBSection"
 
 const LandingPage = ()=>{
     return(
     <div>
-        <HeaderHome/>
-    LandingPage
-
+        <PlanBSection />
     </div>
 )
     }
