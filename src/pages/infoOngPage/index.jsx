@@ -5,6 +5,7 @@ import Filter from "../../components/filterHeader";
 import { useState, useEffect } from "react";
 
 import { infoMock } from "./infoMock";
+import Footer from "../../components/footer";
 
 const InfoOngPage = () => {
   const [check1, setCheck1] = useState(false);
@@ -104,6 +105,7 @@ const InfoOngPage = () => {
           <p>Infelizmente não encontramos nenhum resultado :( </p>
         )}
       </StyledArticle>
+      <Footer />
     </>
   );
 };

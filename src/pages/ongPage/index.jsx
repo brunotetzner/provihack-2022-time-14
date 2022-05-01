@@ -11,6 +11,7 @@ import Filter from "../../components/filterHeader";
 import { useEffect, useState } from "react";
 import { getRequest, getRequestSearchFilter } from "../../services/requests";
 import { Loader } from "../../components/Loader";
+import Footer from "../../components/footer";
 
 const OngPage = () => {
   const [loading, setLoading] = useState(true);
@@ -46,50 +47,32 @@ const OngPage = () => {
     setNameSearch(event.target.value);
   };
   const onChangeStateSearch = (event) => {
-    getRequestSearchFilter(
-      setOngs,
-      setLoading,
-      "ongs",
-      null,
-      event.target.value
-    );
+    getRequestSearchFilter(setOngs, setLoading, "ongs", null, event.target.value);
   };
   const onCLickSearch = () => {
     getRequestSearchFilter(setOngs, setLoading, "ongs", nameSearch);
   };
 
-  const filters = [check1, check2, check3, check4, check5];
-  const onChangeFilters = [
-    onChangeCheck1,
-    onChangeCheck2,
-    onChangeCheck3,
-    onChangeCheck4,
-    onChangeCheck5,
-  ];
-  const filtersCheckbox = [
-    "Reciclagem",
-    "Compostagem",
-    "Alimentos Orgânicos",
-    "Economia de água",
-    "Economia de energia",
-  ];
+  const filters = [check1, check2, check3, check4, check5]
+  const onChangeFilters = [onChangeCheck1, onChangeCheck2, onChangeCheck3, onChangeCheck4, onChangeCheck5]
+  const filtersCheckbox = ['Reciclagem', 'Compostagem', 'Alimentos Orgânicos', 'Economia de água', 'Economia de energia']
+  console.log(filters, filtersCheckbox)
   const listOngsFilter =
-    ongs.ongsList &&
-    ongs.ongsList
+    ongs.ongsList && ongs.ongsList
       .filter((ong) => {
-        return !check1 || ong.causes.includes("Reciclagem");
+        return !check1 || ong.cause.includes("Reciclagem");
       })
       .filter((ong) => {
-        return !check2 || ong.causes.includes("Compostagem");
+        return !check2 || ong.cause.includes("Compostagem");
       })
       .filter((ong) => {
-        return !check3 || ong.causes.includes("Alimentos Orgânicos");
+        return !check3 || ong.cause.includes("Alimentos Orgânicos");
       })
       .filter((ong) => {
-        return !check4 || ong.causes.includes("Economia de água");
+        return !check4 || ong.cause.includes("Economia de água");
       })
       .filter((ong) => {
-        return !check5 || ong.causes.includes("Economia de energia");
+        return !check5 || ong.cause.includes("Economia de energia");
       });
 
   return (
@@ -106,29 +89,30 @@ const OngPage = () => {
         page={"Oportunidades"}
         onCLickSearch={onCLickSearch}
       />
-      {listOngsFilter && listOngsFilter.length > 0 ? (
-        <>
-          <CardsHeader>
-            <Title>ONG's</Title>
-            <span>{listOngsFilter.length} resultados</span>
-          </CardsHeader>
-          {loading ? (
-            <LoaderContainer>
-              <Loader />
-            </LoaderContainer>
-          ) : (
+      {loading ?
+        <LoaderContainer>
+          <Loader />
+        </LoaderContainer>
+        :
+        listOngsFilter && listOngsFilter.length > 0 ?
+          <>
+            <CardsHeader>
+              <Title>ONG's</Title>
+              <span>{listOngsFilter.length} resultados</span>
+            </CardsHeader>
+
             <CardsContainer type="ong">
               {listOngsFilter.map((item, index) => {
                 return <CardOngOrSchool org={item} key={index} type="ong" />;
               })}
             </CardsContainer>
-          )}
-        </>
-      ) : (
-        <TextNotFound>
-          Infelizmente não encontramos nenhuma ONG cadastrada com esse perfil :({" "}
-        </TextNotFound>
-      )}
+          </>
+          :
+          <TextNotFound>
+            Infelizmente não encontramos nenhuma ONG cadastrada com esse perfil :({" "}
+          </TextNotFound>
+      }
+      <Footer />
     </>
   );
 };
