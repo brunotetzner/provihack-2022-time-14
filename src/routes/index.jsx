@@ -7,6 +7,7 @@ import Signin from "../pages/signIn/index";
 import LandingPage from "../pages/landingPage/index";
 import OngEditalsPage from "../pages/ongEditalsPage";
 import SchoolEditalsPage from "../pages/schoolEditalsPage";
+import TipsPage from "../pages/tipsPage";
 
 const Router = () => {
   return (
@@ -20,8 +21,9 @@ const Router = () => {
         <Route path={"/login"} element={<Signin />} />
         <Route path={"/ong/editals"} element={<OngEditalsPage />} />
         <Route path={"/school/editals"} element={<SchoolEditalsPage />} />
+        <Route path={"/tips"} element={<TipsPage />} />
 
-        <Route path={"/*"} element={<Signin />} />
+        <Route path={"/*"} element={<LandingPage />} />
         {/* Alterar a pagina de erro */}
       </Routes>
     </BrowserRouter>

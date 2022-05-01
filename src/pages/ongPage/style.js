@@ -11,6 +11,13 @@ export const Title = styled.div`
     
       
 `
+export const TextNotFound = styled.h1`
+    text-align: center;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 120%;
+    padding: 40px 120px;
+`
 export const CardsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -21,6 +28,11 @@ export const CardsContainer = styled.div`
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${backgroundOng});
     background-size: cover;
     padding: 112px 20px;
+`
+export const LoaderContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 export const IconContainer = styled.span`
