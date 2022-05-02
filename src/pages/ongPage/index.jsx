@@ -23,10 +23,13 @@ const OngPage = () => {
   const [check4, setCheck4] = useState(false);
   const [check5, setCheck5] = useState(false);
   const [nameSearch, setNameSearch] = useState("");
+  const [stateSearch, setStateSearch] = useState("");
 
   useEffect(() => {
     !nameSearch && getRequest(setOngs, setLoading, "ongs");
-  }, [nameSearch]);
+    !stateSearch && getRequest(setOngs, setLoading, "ongs");
+
+  }, [nameSearch, stateSearch]);
 
   const onChangeCheck1 = (event) => {
     setCheck1(event.target.checked);
@@ -47,6 +50,7 @@ const OngPage = () => {
     setNameSearch(event.target.value);
   };
   const onChangeStateSearch = (event) => {
+    setStateSearch(event.target.value)
     getRequestSearchFilter(setOngs, setLoading, "ongs", null, event.target.value);
   };
   const onCLickSearch = () => {
@@ -85,6 +89,7 @@ const OngPage = () => {
         onChangeFilters={onChangeFilters}
         onChangeStateSearch={onChangeStateSearch}
         onChangeNameSearch={onChangeNameSearch}
+        stateSearch = {stateSearch}
         nameSearch={nameSearch}
         page={"Oportunidades"}
         onCLickSearch={onCLickSearch}

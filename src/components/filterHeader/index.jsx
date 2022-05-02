@@ -29,7 +29,7 @@ const Filter = (props) => {
                     onChange = {props.onChangeNameSearch}
                 /> 
                 {
-                    props.page==='Oportunidades' && <Select onChange={props.onChangeStateSearch}>
+                    props.page==='Oportunidades' && <Select onChange={props.onChangeStateSearch} value={props.stateSearch}>
                         
                         <option value={''}>Selecione o estado</option>
                         <option value = {"AC"}>AC</option>
