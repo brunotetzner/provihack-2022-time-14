@@ -72,3 +72,9 @@ export const CardContainer = styled.section`
     }
   }
 `;
+
+export const Description = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+`

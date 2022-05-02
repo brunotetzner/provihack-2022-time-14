@@ -1,4 +1,4 @@
-import { CardContainer, Button, CausesContainer, CausesLisContainer, IconContainer, Container, BackHeader, BackInfo, Title, Top, Address, Mail } from "./style"
+import { CardContainer, Button, CausesContainer, CausesLisContainer, IconContainer, Container, BackHeader, BackInfo, Title, Top, Address, Mail, AddressInfo } from "./style"
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import { useRef, useState } from 'react';
 import { theme } from "../../themes";
@@ -26,7 +26,7 @@ const CardOngOrSchool = (props) => {
             >
                 <FrontSide style={{ backgroundColor: `${theme.white.third}`, padding: '20px 24px', minHeight: '416px', maxWidth:'376px', minWidth:'260px' , borderRadius: '30px', boxShadow: '2px 4px 4px rgba(0, 0, 0, 0.15)' }} animationDuration={1000}>
                     <Container>
-                        {props.type === 'school' ? <IconContainer><IoSchoolSharp /><p>{address[1]} - {props.org.state}</p></IconContainer> : <IconContainer><MdPeople /><p>{address[1]} - {props.org.state}</p></IconContainer>}
+                        {props.type === 'school' ? <IconContainer><IoSchoolSharp /><AddressInfo>{address[1]} - {props.org.state}</AddressInfo></IconContainer> : <IconContainer><MdPeople /><p>{address[1]} - {props.org.state}</p></IconContainer>}
                         <div>
                             <Title>{props.org.name}</Title>
                             
