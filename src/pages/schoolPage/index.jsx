@@ -15,13 +15,15 @@ const SchoolPage = () => {
   const [check4, setCheck4] = useState(false)
   const [check5, setCheck5] = useState(false)
   const [nameSearch, setNameSearch] = useState('')
+  const [stateSearch, setStateSearch] = useState("");
 
   const [loading, setLoading] = useState(true)
   const [schools, setSchools] = useState({})
 
   useEffect(() => {
     !nameSearch && getRequest(setSchools, setLoading, 'schools')
-  }, [nameSearch])
+    !stateSearch && getRequest(setSchools, setLoading, "schools");
+  }, [nameSearch, stateSearch])
 
   const onChangeCheck1 = (event) => {
     setCheck1(event.target.checked)
@@ -42,6 +44,7 @@ const SchoolPage = () => {
     setNameSearch(event.target.value)
   }
   const onChangeStateSearch = (event) => {
+    setStateSearch(event.target.value)
     getRequestSearchFilter(setSchools, setLoading, 'schools', null, event.target.value)
   }
   const onCLickSearch = () => {
@@ -76,6 +79,7 @@ const SchoolPage = () => {
         onChangeFilters={onChangeFilters}
         onChangeNameSearch={onChangeNameSearch}
         onChangeStateSearch={onChangeStateSearch}
+        stateSearch = {stateSearch}
         nameSearch={nameSearch}
         page={'Oportunidades'}
         onCLickSearch={onCLickSearch}
