@@ -15,8 +15,8 @@ export const CausesContainer = styled.span`
 
 `
 export const IconContainer = styled.span`
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
     font-size: 1.5rem;
     margin-bottom: 24px;
     color:#000000;
@@ -129,6 +129,9 @@ export const Button = styled.button`
         background-color:${props => props.color==='school' ? theme.green.primary : '#B97100'};
 
     }
+`
 
+export const AddressInfo = styled.p`
+    font-weight: 100;
 `
 

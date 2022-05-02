@@ -31,7 +31,7 @@ const Filter = (props) => {
                 {
                     props.page==='Oportunidades' && <Select onChange={props.onChangeStateSearch}>
                         
-                        <option value={''} disabled>Selecione o estado</option>
+                        <option value={''}>Selecione o estado</option>
                         <option value = {"AC"}>AC</option>
                         <option value = {'AL'}>AL</option>
                         <option value = {'AP'}>AP</option>

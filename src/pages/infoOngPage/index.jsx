@@ -88,7 +88,7 @@ const InfoOngPage = () => {
           onCLickSearch={searchForName}
         />
         <div id="quantity">
-          <Title>Ong's</Title>
+          <Title>ONG's</Title>
           <h5>{ongsToRender.length} resultados</h5>
         </div>
         {ongsToRender && ongsToRender.length > 0 ? (

@@ -54,6 +54,7 @@ export const CardContainer = styled.section`
   }
 
   a {
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,3 +72,9 @@ export const CardContainer = styled.section`
     }
   }
 `;
+
+export const Description = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+`

@@ -1,10 +1,6 @@
 import styled from "styled-components"
 import bgImage from "../../assets/images/bgTips.svg"
 
-// export const TipPageContainer = styled.div`
-//     max-height: 100vh;
-// `
-
 export const TipsSection = styled.div`
     height: 100vh;
     background: url(${bgImage});
@@ -17,7 +13,7 @@ export const TipsSection = styled.div`
     align-items: center;
 
     h4 {
-        /* margin: 72px 0 77px 0; */
+        margin: 72px 0 77px 0;
         font-weight: 700;
         font-size: 38px;
         line-height: 120%;

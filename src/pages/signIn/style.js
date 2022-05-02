@@ -5,6 +5,8 @@ export const ContainerSignInPage = styled.article`
   width: 100vw;
   height: 100vh;
   background-image: url(${logo});
+  background-size: cover;
+  background-position: 100% 95% ;
   display: flex;
   justify-content: center;
   align-items: center;
